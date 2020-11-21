@@ -1,5 +1,5 @@
 class PerfilsController < ApplicationController
-  before_action :set_perfil, only: [:show, :update, :destroy]
+  before_action :authorized, :set_perfil, only: [:show, :update, :destroy]
 
   # GET /perfils
   def index
